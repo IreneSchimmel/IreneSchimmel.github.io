@@ -1,0 +1,82 @@
+---
+title: "Portfolio assignment 1.1"
+author: "Irene Schimmel"
+date: "12-4-2021"
+output: html_document
+---
+
+``` {r libraries, message = FALSE}
+library(tidyverse)
+library(drc)
+library(readxl)
+library(ggplot2)
+```
+
+### Portfolio assignment 1.1
+#### _C. elegans_ plate experiment
+
+###### A. There is a lot of data in the file, but not always very logically ordered. There also seem to be quite a lot of missing data points.
+
+###### B., C. 
+###### For RawData and compConcentration, the expected data type is numeric. For compName, the expected data type is character.
+``` {r importing and inspecting file}
+CE.LIQ.FLOW.062 <- read_excel(here::here("data/CE.LIQ.FLOW.062_Tidydata.xlsx")) ##importing file
+inspect_columns <- CE.LIQ.FLOW.062 %>% dplyr::select(RawData, compName, compConcentration) ##selecting the columns
+skimr::skim(inspect_columns) ##printing overview of the selected columns
+
+```
+
+###### As shown in the overview, RawData and compName have been assigned their expected data types. compConcentration, however, has been assigned a character values. This means that not all data types have been correctly assigned during the importing of the file.
+
+###### D.
+``` {r scatterplot graph}
+CE.LIQ.FLOW.062 %>% ggplot() +
+  geom_point(aes(x = compConcentration, y = RawData, colour = compName, shape = expType)) +
+  labs(title = "Scatterplot from C. elegans experiment",
+       subtitle = "The raw data against the compound concentration",
+       x = "Compound concentration",
+       y = "Raw data") +
+  theme(axis.text.x = element_text(angle=90)) 
+  
+```
+###### E. The data type is 'character'. Because of this, the x-axis variables are seen as strings instead of numbers and therefore can not scale them.
+
+###### F.
+``` {r assigning proper data type and scatterplot graph}
+CE.LIQ.FLOW.062$compConcentration <- gsub(",", ".", CE.LIQ.FLOW.062$compConcentration) ##replace , with . (for data point 259)
+CE.LIQ.FLOW.062$compConcentration <- as.numeric(CE.LIQ.FLOW.062$compConcentration) ##assign correct data type
+
+CE.LIQ.FLOW.062 %>% ggplot() +
+  geom_point(aes(x = log10(compConcentration), y = RawData, colour = compName, shape = expType), position = position_jitter(width = 0.1, height = 0.1), size = 2) +
+  labs(title = "Scatterplot from C. elegans experiment",
+       subtitle = "The raw data against the compound concentration",
+       x = "Compound concentration",
+       y = "Raw data")
+```
+
+###### G. The positive control for this experiment is Ethanol.
+###### H. The negative control for this experiment is S-medium.
+#
+###### I. (1) First, the mean of the different concentrations are calculated, per compound. 
+###### (2) Then, these means are divided by the controlNegative mean to calculate the relative effect per compound per concentration. 
+###### (3) When these relative values are plotted in a curve, the difference in IC50 (if any) will be shown. 
+###### (4) Finally, there may be run some statistical tests to indicate whether there is a statistically significant difference between different curves.
+
+###### J.
+``` {r relative values}
+controlNegative <- CE.LIQ.FLOW.062 %>% filter(expType == "controlNegative")
+cn_mean <- mean(controlNegative$RawData)
+cn_mean / cn_mean
+
+means <- CE.LIQ.FLOW.062 %>% group_by(compName, compConcentration) %>% summarise(mean = mean(RawData, na.rm = TRUE))
+means$relative <- means$mean / cn_mean
+
+means %>% ggplot() +
+  geom_point(aes(x = log10(compConcentration), y = relative, colour = compName), position = position_jitter(width = 0.1, height = 0.1), size = 2) +
+  labs(title = "Scatterplot from C. elegans experiment",
+       subtitle = "The raw data against the compound concentration",
+       x = "Compound concentration",
+       y = "Raw data")
+```
+
+###### K. By viewing the data relatively, it visualizes the differences and similarities between data points more accurately than when viewing them as raw data points.

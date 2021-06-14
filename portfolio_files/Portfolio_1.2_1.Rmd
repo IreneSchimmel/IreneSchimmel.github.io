@@ -1,0 +1,31 @@
+---
+title: "Portfolio assignment 1.2, part 1"
+author: "Irene Schimmel"
+date: "12-4-2021"
+output: html_document
+---
+
+#### Tocilizumab in Patients Hospitalized with Covid-19 Pneumonia (Salama et al., 2020)
+***
+#
+This study is on the effect of the anti-interleukin-6 receptor antibody tocilizumab in, namely racial and ethnic minority, patients with COVID-19 pneumonia.
+
+A total of 389 patients, who were not receiving mechanical ventilation, were randomly assigned either one or two doses of tocilizumab or placebo in a 2:1 ratio.
+
+Overall, the tocilizumab reduced the likelihood of progression towards either mechanical ventilation or death, but did not improve survival.
+
+#
+***
+
+###### Table 1; the transparency criteria.
+|Transparency Criteria| Response|
+|-------------|------|
+|Study Purpose| Yes|
+|Data Availability Statement| Yes|
+|Data Location| Supplementary appendix|
+|Study Location| Yes, Supplementary appendix|
+|Author Review| Good, author information|
+|Ethics Statement| Yes|
+|Funding Statement| Yes|
+|Code Availability| No|
+

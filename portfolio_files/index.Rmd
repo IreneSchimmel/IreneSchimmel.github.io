@@ -1,0 +1,20 @@
+---
+bookdown::gitbook:
+  config:
+    toc:
+      collapse: section
+      scroll_highlight: yes
+      before: |
+        <li><a href="./">Portfolio of Irene Schimmel</a></li>
+      after: |
+        <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+      sharing:
+        facebook: no
+        github: no
+        twitter: no
+        linkedin: no
+        weibo: no
+        instapaper: no
+        vk: no
+        whatsapp: no
+---
