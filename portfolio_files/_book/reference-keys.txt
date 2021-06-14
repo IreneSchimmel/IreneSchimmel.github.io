@@ -32,10 +32,3 @@ o.-despite-needing-to-change-some-of-the-code-the-reproduction-of-a-figure-was-r
 p.
 table-1-the-transparency-criteria.-1
 portfolio-assignment-6.2
-aside
-contact-info
-skills
-traits
-languages
-main
-title
