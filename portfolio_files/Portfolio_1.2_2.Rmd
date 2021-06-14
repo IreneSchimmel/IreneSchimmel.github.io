@@ -1,11 +1,5 @@
----
-title: "Portfolio assignment 1.2, part 2"
-author: "Irene Schimmel"
-date: "12-4-2021"
-output: 
-  html_document:
-    code_folding: "hide"
----
+# "Portfolio assignment 1.2, part 2"
+
 ##### H., I. Mental Health Impacts in Argentinean College Students During COVID-19 Quarantine https://osf.io/t523v/
 
 ##### J. The code mainly makes tables from the data and then runs several statistical analyses.
@@ -47,7 +41,7 @@ library(readxl)
 
 # Load the dataset
 # table<-read.table("clipboard",header=TRUE, encoding = "Latin 1", dec=",", sep="\t") 
-table <- read_excel("../data_raw/dataset.xlsx")
+table <- read_excel("../data/dataset.xlsx")
 summary(table)
 
 # Load the packages:

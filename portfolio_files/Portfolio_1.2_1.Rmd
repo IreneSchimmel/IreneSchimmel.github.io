@@ -1,9 +1,5 @@
----
-title: "Portfolio assignment 1.2, part 1"
-author: "Irene Schimmel"
-date: "12-4-2021"
-output: html_document
----
+
+#"Portfolio assignment 1.2, part 1"
 
 #### Tocilizumab in Patients Hospitalized with Covid-19 Pneumonia (Salama et al., 2020)
 ***
