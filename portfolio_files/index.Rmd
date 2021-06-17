@@ -1,8 +1,0 @@
----
-title: "Portfolio of Irene Schimmel"
-authors: "Irene Schimmel"
-site: bookdown::bookdown_site
-output: bookdown::gitbook
-documentclass: book
----
-# Index

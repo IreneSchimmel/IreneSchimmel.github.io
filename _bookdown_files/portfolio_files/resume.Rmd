@@ -1,0 +1,47 @@
+---
+title: "Resume"
+author: "Irene Schimmel"
+output: pagedown::html_resume
+---
+
+Aside
+=============================================
+
+Contact info
+---------------------------------------------
+Name: 	
+Irene Maria Schimmel
+
+Date of birth: 	
+22-10-1998
+
+Mobile phone:	
++31 680138647
+
+LinkedIn:
+https://www.linkedin.com/in/ireneschimmel/
+
+Skills
+--------------------------------------------
+R (programming language)  
+Interdisciplinairy teamwork  
+Problem solving  
+
+Traits
+--------------------------------------------
+Representative  
+Responsible  
+Creative  
+
+Languages
+--------------------------------------------
+Dutch  
+*Native*  
+English  
+*Fluent, C1*  
+
+Main
+=============================================
+
+Irene Schimmel {#title}
+---------------------------------------------

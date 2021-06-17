@@ -1,0 +1,22 @@
+theme: jekyll-theme-time-machine
+title: Welcome to my portfolio!
+description: This portfolio contains an overview of my programming skills.
+bookdown::gitbook:
+  config:
+  code_folding: "hide"
+    toc:
+      collapse: section
+      scroll_highlight: yes
+      before: |
+        <li><a href="./">Portfolio of Irene Schimmel</a></li>
+      after: |
+        <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+      sharing:
+        facebook: no
+        github: no
+        twitter: no
+        linkedin: no
+        weibo: no
+        instapaper: no
+        vk: no
+        whatsapp: no

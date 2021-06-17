@@ -1,0 +1,13 @@
+# "Portfolio assignment 6.2"
+
+
+In a little more than two years from now, I'd like to be graduating the Applied Data Science master at University Utrecht. This minor is a great prerequisite, as it focuses on R and statistics. 
+Besides that, however, the master also requires basic knowledge of data-analysis and statistics in Python. While the data-analysis and statistics knowledge overall will be the same, I'll need to know how to do these things using Python.
+
+Therefore, I will spend this course's free time studying Python, with a focus on data-analysis and statistics.
+I will start by doing some tutorials on the [BeginnersGuide](https://wiki.python.org/moin/BeginnersGuide/Programmers).
+Then, I will do at least [this tutorial](https://towardsdatascience.com/a-beginners-guide-to-data-analysis-in-python-188706df5447) on data-analysis using Python. Maybe more, depending on the time it takes.
+After that, I will walk through [this tutorial](https://realpython.com/python-statistics/) to get some insight in how to use statistics in Python. This tutorial also incorporates some data wrangling, so it will be a nice addition.
+
+While I realize that this obviously isn't enough to learn Python, I think it'll make for a great start.
+I'll try and learn some more over the summer, probably asking some tutoring from my friends that already have a lot of experience using Python (they better be glad, seeing as how they're always bugging me to start learning it).
