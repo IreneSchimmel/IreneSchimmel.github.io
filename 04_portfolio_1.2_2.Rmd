@@ -45,7 +45,7 @@ library(readxl)
 
 # Load the dataset
 # table<-read.table("clipboard",header=TRUE, encoding = "Latin 1", dec=",", sep="\t") 
-table <- read_excel("../data_raw/dataset.xlsx")
+table <- read_excel("data/dataset.xlsx")
 summary(table)
 
 # Load the packages:
