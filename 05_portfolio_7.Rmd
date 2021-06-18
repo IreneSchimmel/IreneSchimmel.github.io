@@ -1,0 +1,140 @@
+# Working with databases
+
+This exercise shows my work with SQL and PostgreSQL in DBeaver, and the relation from and to R in Rstudio.
+
+Starting with some setup and loading and tidying of data in Rstudio.
+
+```{r setup_2, message=FALSE, warning=FALSE}
+library(tidyverse) #version 1.3.1
+library(dslabs) #version 0.7.4
+library(RPostgres) #version 1.3.2
+```
+
+```{r load_dfs}
+df_flu <- read.csv("data/flu_data.csv", skip = 11)
+df_dengue <- read.csv("data/dengue_data.csv", skip = 11)
+df_gapminder <- gapminder
+```
+
+```{r make_tidy}
+df_flu <- df_flu %>% gather(key = "country", value = "activity", -Date)
+
+df_dengue <- df_dengue %>% gather(key = "country", value = "activity", -Date)
+```
+
+Making sure the datasets coincide on variables, so they may be used together.
+
+```{r coincide_variables}
+df_flu <- separate(df_flu, Date, into = c("year", "month", "day"), sep = '-') 
+df_flu$year <- as.integer(df_flu$year)
+df_flu$country <- as.factor(df_flu$country)
+
+df_dengue <- separate(df_dengue, Date, into = c("year", "month", "day"), sep = '-') 
+df_dengue$year <- as.integer(df_dengue$year)
+df_dengue$country <- as.factor(df_dengue$country)
+```
+
+And storing them for safe-keeping!
+
+```{r store}
+write_csv(df_flu, here::here("data\\df_flu.csv"))
+write_rds(df_flu, here::here("data\\df_flu.rds"))
+
+write_csv(df_dengue, here::here("data\\df_dengue.csv"))
+write_rds(df_dengue, here::here("data\\df_dengue.rds"))
+
+write_csv(df_gapminder, here::here("data\\gapminder.csv"))
+write_rds(df_gapminder, here::here("data\\df_gapminder.rds"))
+```
+
+Then inserting them into a premade PostgreSQL database in DBeaver.
+
+``` {r db_connect}
+# con <- dbConnect(RPostgres::Postgres(),
+#                dbname = "workflowsdb",
+#                host = "localhost",
+#                port = "5432",
+#                user = "postgres",
+#                password = "password")
+# dbWriteTable(con, "df_flu", df_flu)
+# dbWriteTable(con, "df_dengue", df_dengue)
+# dbWriteTable(con, "df_gapminder", df_gapminder)
+# dbDisconnect(con)
+```
+
+And inspecting the data to see if the transfer went properly.
+
+```{r inspect}
+# in dbeaver
+knitr::include_graphics(
+  here::here(
+    "images",
+    "dbeaver_screenshot.png"
+  )
+)
+
+# in Rstudio
+head(df_flu)
+head(df_dengue)
+head(df_gapminder)
+```
+
+The gapminder dataset needed some cleaning and ofcourse this new, clean dataset needed to be put in the database as well.
+
+```{r clean}
+clean_gapminder <- df_gapminder %>% na.omit()
+
+# con <- dbConnect(RPostgres::Postgres(),
+#                dbname = "workflowsdb",
+#                host = "localhost",
+#                port = "5432",
+#                user = "postgres",
+#                password = "password")
+# dbWriteTable(con, "clean_gapminder", clean_gapminder)
+# dbDisconnect(con)
+
+knitr::include_graphics(
+  here::here(
+    "images",
+    "db_screenshot2.png"
+  )
+)
+```
+
+Then joining them using SQL and putting the joined dataset back in Rstudio to show some desciptive statistics and graphs.
+
+```{r stats_graphs}
+knitr::include_graphics(here::here(
+  "images",
+  "db_screenshot3.png"
+))
+joined_dfs <- read.csv("data/joined_dfs_202106171226.csv")
+
+summary(joined_dfs)
+
+tidy_dfs <- joined_dfs %>% gather('infant_mortality', 'flu_activity', 'dengue_activity', key = "group", value = "activity", na.rm = TRUE)
+
+tidy_dfs %>% filter(activity <= 540) %>% ggplot(aes(x = group, y = activity)) +
+  geom_boxplot(aes(fill = group)) +
+  labs(title = "Boxplot of the activity per group",
+       x = "",
+       y = "Activity",
+       caption = "Data from the flu_data, dengue_data and gapminder datasets") +
+  theme_minimal()
+
+tidy_dfs %>% ggplot(aes(x = country, y = activity)) +
+  geom_boxplot(aes(fill = country)) +
+  labs(title = "Boxplot of the activity per country",
+       x = "",
+       y = "Activity",
+       caption = "Data from the flu_data, dengue_data and gapminder datasets") +
+  theme_minimal()
+
+tidy_dfs %>% filter(group == "flu_activity") %>% ggplot(aes(x = year, y = activity)) +
+  geom_smooth() +
+  labs(title = "Graph of the average flu activity per year",
+       x = "Year",
+       y = "Activity",
+       caption = "Data from the flu_data dataset") +
+  theme_minimal()
+```
