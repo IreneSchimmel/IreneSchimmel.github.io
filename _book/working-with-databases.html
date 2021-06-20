@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>7 Working with databases | Resume</title>
+  <meta name="description" content="7 Working with databases | Resume" />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="7 Working with databases | Resume" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="7 Working with databases | Resume" />
+  
+  
+  
+
+<meta name="author" content="Irene Schimmel" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="mental-health-impacts-in-argentinean-college-students-during-covid-19-quarantine.html"/>
+<link rel="next" href="portfolio-assignment-6-2.html"/>
+<script src="libs/header-attrs-2.9/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Index</a></li>
+<li class="chapter" data-level="2" data-path="aside.html"><a href="aside.html"><i class="fa fa-check"></i><b>2</b> Aside</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="aside.html"><a href="aside.html#contact-info"><i class="fa fa-check"></i><b>2.1</b> Contact info</a></li>
+<li class="chapter" data-level="2.2" data-path="aside.html"><a href="aside.html#skills"><i class="fa fa-check"></i><b>2.2</b> Skills</a></li>
+<li class="chapter" data-level="2.3" data-path="aside.html"><a href="aside.html#traits"><i class="fa fa-check"></i><b>2.3</b> Traits</a></li>
+<li class="chapter" data-level="2.4" data-path="aside.html"><a href="aside.html#languages"><i class="fa fa-check"></i><b>2.4</b> Languages</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="main.html"><a href="main.html"><i class="fa fa-check"></i><b>3</b> Main</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="main.html"><a href="main.html#title"><i class="fa fa-check"></i><b>3.1</b> Irene Schimmel</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="c-elegans-plate-experiment-analysis.html"><a href="c-elegans-plate-experiment-analysis.html"><i class="fa fa-check"></i><b>4</b> <em>C. elegans</em> plate experiment analysis</a></li>
+<li class="chapter" data-level="5" data-path="tocilizumab-in-patients-hospitalized-with-covid-19-pneumonia-salama-et-al-2020.html"><a href="tocilizumab-in-patients-hospitalized-with-covid-19-pneumonia-salama-et-al-2020.html"><i class="fa fa-check"></i><b>5</b> Tocilizumab in Patients Hospitalized with Covid-19 Pneumonia (Salama et al., 2020)</a></li>
+<li class="chapter" data-level="6" data-path="mental-health-impacts-in-argentinean-college-students-during-covid-19-quarantine.html"><a href="mental-health-impacts-in-argentinean-college-students-during-covid-19-quarantine.html"><i class="fa fa-check"></i><b>6</b> Mental Health Impacts in Argentinean College Students During COVID-19 Quarantine</a></li>
+<li class="chapter" data-level="7" data-path="working-with-databases.html"><a href="working-with-databases.html"><i class="fa fa-check"></i><b>7</b> Working with databases</a></li>
+<li class="chapter" data-level="8" data-path="portfolio-assignment-6-2.html"><a href="portfolio-assignment-6-2.html"><i class="fa fa-check"></i><b>8</b> “Portfolio assignment 6.2”</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Resume</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="working-with-databases" class="section level1" number="7">
+<h1><span class="header-section-number">7</span> Working with databases</h1>
+<p>This exercise shows my work with SQL and PostgreSQL in DBeaver, and the relation from and to R in Rstudio.</p>
+<p>Starting with some setup and loading and tidying of data in Rstudio.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="working-with-databases.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse) <span class="co">#version 1.3.1</span></span>
+<span id="cb9-2"><a href="working-with-databases.html#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dslabs) <span class="co">#version 0.7.4</span></span>
+<span id="cb9-3"><a href="working-with-databases.html#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(RPostgres) <span class="co">#version 1.3.2</span></span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="working-with-databases.html#cb10-1" aria-hidden="true" tabindex="-1"></a>df_flu <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;data/flu_data.csv&quot;</span>, <span class="at">skip =</span> <span class="dv">11</span>)</span>
+<span id="cb10-2"><a href="working-with-databases.html#cb10-2" aria-hidden="true" tabindex="-1"></a>df_dengue <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;data/dengue_data.csv&quot;</span>, <span class="at">skip =</span> <span class="dv">11</span>)</span>
+<span id="cb10-3"><a href="working-with-databases.html#cb10-3" aria-hidden="true" tabindex="-1"></a>df_gapminder <span class="ot">&lt;-</span> gapminder</span></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="working-with-databases.html#cb11-1" aria-hidden="true" tabindex="-1"></a>df_flu <span class="ot">&lt;-</span> df_flu <span class="sc">%&gt;%</span> <span class="fu">gather</span>(<span class="at">key =</span> <span class="st">&quot;country&quot;</span>, <span class="at">value =</span> <span class="st">&quot;activity&quot;</span>, <span class="sc">-</span>Date)</span>
+<span id="cb11-2"><a href="working-with-databases.html#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="working-with-databases.html#cb11-3" aria-hidden="true" tabindex="-1"></a>df_dengue <span class="ot">&lt;-</span> df_dengue <span class="sc">%&gt;%</span> <span class="fu">gather</span>(<span class="at">key =</span> <span class="st">&quot;country&quot;</span>, <span class="at">value =</span> <span class="st">&quot;activity&quot;</span>, <span class="sc">-</span>Date)</span></code></pre></div>
+<p>Making sure the datasets coincide on variables, so they may be used together.</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="working-with-databases.html#cb12-1" aria-hidden="true" tabindex="-1"></a>df_flu <span class="ot">&lt;-</span> <span class="fu">separate</span>(df_flu, Date, <span class="at">into =</span> <span class="fu">c</span>(<span class="st">&quot;year&quot;</span>, <span class="st">&quot;month&quot;</span>, <span class="st">&quot;day&quot;</span>), <span class="at">sep =</span> <span class="st">&#39;-&#39;</span>) </span>
+<span id="cb12-2"><a href="working-with-databases.html#cb12-2" aria-hidden="true" tabindex="-1"></a>df_flu<span class="sc">$</span>year <span class="ot">&lt;-</span> <span class="fu">as.integer</span>(df_flu<span class="sc">$</span>year)</span>
+<span id="cb12-3"><a href="working-with-databases.html#cb12-3" aria-hidden="true" tabindex="-1"></a>df_flu<span class="sc">$</span>country <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(df_flu<span class="sc">$</span>country)</span>
+<span id="cb12-4"><a href="working-with-databases.html#cb12-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-5"><a href="working-with-databases.html#cb12-5" aria-hidden="true" tabindex="-1"></a>df_dengue <span class="ot">&lt;-</span> <span class="fu">separate</span>(df_dengue, Date, <span class="at">into =</span> <span class="fu">c</span>(<span class="st">&quot;year&quot;</span>, <span class="st">&quot;month&quot;</span>, <span class="st">&quot;day&quot;</span>), <span class="at">sep =</span> <span class="st">&#39;-&#39;</span>) </span>
+<span id="cb12-6"><a href="working-with-databases.html#cb12-6" aria-hidden="true" tabindex="-1"></a>df_dengue<span class="sc">$</span>year <span class="ot">&lt;-</span> <span class="fu">as.integer</span>(df_dengue<span class="sc">$</span>year)</span>
+<span id="cb12-7"><a href="working-with-databases.html#cb12-7" aria-hidden="true" tabindex="-1"></a>df_dengue<span class="sc">$</span>country <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(df_dengue<span class="sc">$</span>country)</span></code></pre></div>
+<p>And storing them for safe-keeping!</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="working-with-databases.html#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">write_csv</span>(df_flu, here<span class="sc">::</span><span class="fu">here</span>(<span class="st">&quot;data</span><span class="sc">\\</span><span class="st">df_flu.csv&quot;</span>))</span>
+<span id="cb13-2"><a href="working-with-databases.html#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">write_rds</span>(df_flu, here<span class="sc">::</span><span class="fu">here</span>(<span class="st">&quot;data</span><span class="sc">\\</span><span class="st">df_flu.rds&quot;</span>))</span>
+<span id="cb13-3"><a href="working-with-databases.html#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-4"><a href="working-with-databases.html#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="fu">write_csv</span>(df_dengue, here<span class="sc">::</span><span class="fu">here</span>(<span class="st">&quot;data</span><span class="sc">\\</span><span class="st">df_dengue.csv&quot;</span>))</span>
+<span id="cb13-5"><a href="working-with-databases.html#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="fu">write_rds</span>(df_dengue, here<span class="sc">::</span><span class="fu">here</span>(<span class="st">&quot;data</span><span class="sc">\\</span><span class="st">df_dengue.rds&quot;</span>))</span>
+<span id="cb13-6"><a href="working-with-databases.html#cb13-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-7"><a href="working-with-databases.html#cb13-7" aria-hidden="true" tabindex="-1"></a><span class="fu">write_csv</span>(df_gapminder, here<span class="sc">::</span><span class="fu">here</span>(<span class="st">&quot;data</span><span class="sc">\\</span><span class="st">gapminder.csv&quot;</span>))</span>
+<span id="cb13-8"><a href="working-with-databases.html#cb13-8" aria-hidden="true" tabindex="-1"></a><span class="fu">write_rds</span>(df_gapminder, here<span class="sc">::</span><span class="fu">here</span>(<span class="st">&quot;data</span><span class="sc">\\</span><span class="st">df_gapminder.rds&quot;</span>))</span></code></pre></div>
+<p>Then inserting them into a premade PostgreSQL database in DBeaver.</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="working-with-databases.html#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># con &lt;- dbConnect(RPostgres::Postgres(),</span></span>
+<span id="cb14-2"><a href="working-with-databases.html#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="co">#                dbname = &quot;workflowsdb&quot;,</span></span>
+<span id="cb14-3"><a href="working-with-databases.html#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="co">#                host = &quot;localhost&quot;,</span></span>
+<span id="cb14-4"><a href="working-with-databases.html#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="co">#                port = &quot;5432&quot;,</span></span>
+<span id="cb14-5"><a href="working-with-databases.html#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="co">#                user = &quot;postgres&quot;,</span></span>
+<span id="cb14-6"><a href="working-with-databases.html#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="co">#                password = &quot;password&quot;)</span></span>
+<span id="cb14-7"><a href="working-with-databases.html#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="co"># dbWriteTable(con, &quot;df_flu&quot;, df_flu)</span></span>
+<span id="cb14-8"><a href="working-with-databases.html#cb14-8" aria-hidden="true" tabindex="-1"></a><span class="co"># dbWriteTable(con, &quot;df_dengue&quot;, df_dengue)</span></span>
+<span id="cb14-9"><a href="working-with-databases.html#cb14-9" aria-hidden="true" tabindex="-1"></a><span class="co"># dbWriteTable(con, &quot;df_gapminder&quot;, df_gapminder)</span></span>
+<span id="cb14-10"><a href="working-with-databases.html#cb14-10" aria-hidden="true" tabindex="-1"></a><span class="co"># dbDisconnect(con)</span></span></code></pre></div>
+<p>And inspecting the data to see if the transfer went properly.</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="working-with-databases.html#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># in dbeaver</span></span>
+<span id="cb15-2"><a href="working-with-databases.html#cb15-2" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(</span>
+<span id="cb15-3"><a href="working-with-databases.html#cb15-3" aria-hidden="true" tabindex="-1"></a>  here<span class="sc">::</span><span class="fu">here</span>(</span>
+<span id="cb15-4"><a href="working-with-databases.html#cb15-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;images&quot;</span>,</span>
+<span id="cb15-5"><a href="working-with-databases.html#cb15-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;dbeaver_screenshot.png&quot;</span></span>
+<span id="cb15-6"><a href="working-with-databases.html#cb15-6" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb15-7"><a href="working-with-databases.html#cb15-7" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
+<p><img src="images/dbeaver_screenshot.png" width="418" /></p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="working-with-databases.html#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># in Rstudio</span></span>
+<span id="cb16-2"><a href="working-with-databases.html#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(df_flu)</span></code></pre></div>
+<pre><code>##   year month day   country activity
+## 1 2002    12  29 Argentina       NA
+## 2 2003    01  05 Argentina       NA
+## 3 2003    01  12 Argentina       NA
+## 4 2003    01  19 Argentina       NA
+## 5 2003    01  26 Argentina       NA
+## 6 2003    02  02 Argentina      136</code></pre>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="working-with-databases.html#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(df_dengue)</span></code></pre></div>
+<pre><code>##   year month day   country activity
+## 1 2002    12  29 Argentina       NA
+## 2 2003    01  05 Argentina       NA
+## 3 2003    01  12 Argentina       NA
+## 4 2003    01  19 Argentina       NA
+## 5 2003    01  26 Argentina       NA
+## 6 2003    02  02 Argentina       NA</code></pre>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="working-with-databases.html#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(df_gapminder)</span></code></pre></div>
+<pre><code>##               country year infant_mortality life_expectancy fertility
+## 1             Albania 1960           115.40           62.87      6.19
+## 2             Algeria 1960           148.20           47.50      7.65
+## 3              Angola 1960           208.00           35.98      7.32
+## 4 Antigua and Barbuda 1960               NA           62.97      4.43
+## 5           Argentina 1960            59.87           65.39      3.11
+## 6             Armenia 1960               NA           66.86      4.55
+##   population          gdp continent          region
+## 1    1636054           NA    Europe Southern Europe
+## 2   11124892  13828152297    Africa Northern Africa
+## 3    5270844           NA    Africa   Middle Africa
+## 4      54681           NA  Americas       Caribbean
+## 5   20619075 108322326649  Americas   South America
+## 6    1867396           NA      Asia    Western Asia</code></pre>
+<p>The gapminder dataset needed some cleaning and ofcourse this new, clean dataset needed to be put in the database as well.</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="working-with-databases.html#cb22-1" aria-hidden="true" tabindex="-1"></a>clean_gapminder <span class="ot">&lt;-</span> df_gapminder <span class="sc">%&gt;%</span> <span class="fu">na.omit</span>()</span>
+<span id="cb22-2"><a href="working-with-databases.html#cb22-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-3"><a href="working-with-databases.html#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="co"># con &lt;- dbConnect(RPostgres::Postgres(),</span></span>
+<span id="cb22-4"><a href="working-with-databases.html#cb22-4" aria-hidden="true" tabindex="-1"></a><span class="co">#                dbname = &quot;workflowsdb&quot;,</span></span>
+<span id="cb22-5"><a href="working-with-databases.html#cb22-5" aria-hidden="true" tabindex="-1"></a><span class="co">#                host = &quot;localhost&quot;,</span></span>
+<span id="cb22-6"><a href="working-with-databases.html#cb22-6" aria-hidden="true" tabindex="-1"></a><span class="co">#                port = &quot;5432&quot;,</span></span>
+<span id="cb22-7"><a href="working-with-databases.html#cb22-7" aria-hidden="true" tabindex="-1"></a><span class="co">#                user = &quot;postgres&quot;,</span></span>
+<span id="cb22-8"><a href="working-with-databases.html#cb22-8" aria-hidden="true" tabindex="-1"></a><span class="co">#                password = &quot;password&quot;)</span></span>
+<span id="cb22-9"><a href="working-with-databases.html#cb22-9" aria-hidden="true" tabindex="-1"></a><span class="co"># dbWriteTable(con, &quot;clean_gapminder&quot;, clean_gapminder)</span></span>
+<span id="cb22-10"><a href="working-with-databases.html#cb22-10" aria-hidden="true" tabindex="-1"></a><span class="co"># dbDisconnect(con)</span></span>
+<span id="cb22-11"><a href="working-with-databases.html#cb22-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-12"><a href="working-with-databases.html#cb22-12" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(</span>
+<span id="cb22-13"><a href="working-with-databases.html#cb22-13" aria-hidden="true" tabindex="-1"></a>  here<span class="sc">::</span><span class="fu">here</span>(</span>
+<span id="cb22-14"><a href="working-with-databases.html#cb22-14" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;images&quot;</span>,</span>
+<span id="cb22-15"><a href="working-with-databases.html#cb22-15" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;db_screenshot2.png&quot;</span></span>
+<span id="cb22-16"><a href="working-with-databases.html#cb22-16" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb22-17"><a href="working-with-databases.html#cb22-17" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
+<p><img src="images/db_screenshot2.png" width="412" /></p>
+<p>Then joining them using SQL and putting the joined dataset back in Rstudio to show some desciptive statistics and graphs.</p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="working-with-databases.html#cb23-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(here<span class="sc">::</span><span class="fu">here</span>(</span>
+<span id="cb23-2"><a href="working-with-databases.html#cb23-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;images&quot;</span>,</span>
+<span id="cb23-3"><a href="working-with-databases.html#cb23-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;db_screenshot3.png&quot;</span></span>
+<span id="cb23-4"><a href="working-with-databases.html#cb23-4" aria-hidden="true" tabindex="-1"></a>))</span></code></pre></div>
+<p><img src="images/db_screenshot3.png" width="533" /></p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="working-with-databases.html#cb24-1" aria-hidden="true" tabindex="-1"></a>joined_dfs <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;data/joined_dfs_202106171226.csv&quot;</span>)</span>
+<span id="cb24-2"><a href="working-with-databases.html#cb24-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-3"><a href="working-with-databases.html#cb24-3" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(joined_dfs)</span></code></pre></div>
+<pre><code>##  infant_mortality  flu_activity    dengue_activity       year     
+##  Min.   :12.70    Min.   :  56.0   Min.   :0.0040   Min.   :2002  
+##  1st Qu.:14.80    1st Qu.: 178.0   1st Qu.:0.0270   1st Qu.:2005  
+##  Median :16.60    Median : 268.0   Median :0.0560   Median :2007  
+##  Mean   :22.65    Mean   : 441.6   Mean   :0.0982   Mean   :2007  
+##  3rd Qu.:27.05    3rd Qu.: 539.0   3rd Qu.:0.1080   3rd Qu.:2009  
+##  Max.   :53.70    Max.   :3041.0   Max.   :1.0000   Max.   :2011  
+##                   NA&#39;s   :2551     NA&#39;s   :366                    
+##    country         
+##  Length:97768      
+##  Class :character  
+##  Mode  :character  
+##                    
+##                    
+##                    
+## </code></pre>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="working-with-databases.html#cb26-1" aria-hidden="true" tabindex="-1"></a>tidy_dfs <span class="ot">&lt;-</span> joined_dfs <span class="sc">%&gt;%</span> <span class="fu">gather</span>(<span class="st">&#39;infant_mortality&#39;</span>, <span class="st">&#39;flu_activity&#39;</span>, <span class="st">&#39;dengue_activity&#39;</span>, <span class="at">key =</span> <span class="st">&quot;group&quot;</span>, <span class="at">value =</span> <span class="st">&quot;activity&quot;</span>, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb26-2"><a href="working-with-databases.html#cb26-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-3"><a href="working-with-databases.html#cb26-3" aria-hidden="true" tabindex="-1"></a>tidy_dfs <span class="sc">%&gt;%</span> <span class="fu">filter</span>(activity <span class="sc">&lt;=</span> <span class="dv">540</span>) <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> group, <span class="at">y =</span> activity)) <span class="sc">+</span></span>
+<span id="cb26-4"><a href="working-with-databases.html#cb26-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">fill =</span> group)) <span class="sc">+</span></span>
+<span id="cb26-5"><a href="working-with-databases.html#cb26-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Boxplot of the activity per group&quot;</span>,</span>
+<span id="cb26-6"><a href="working-with-databases.html#cb26-6" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">&quot;&quot;</span>,</span>
+<span id="cb26-7"><a href="working-with-databases.html#cb26-7" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">&quot;Activity&quot;</span>,</span>
+<span id="cb26-8"><a href="working-with-databases.html#cb26-8" aria-hidden="true" tabindex="-1"></a>       <span class="at">caption =</span> <span class="st">&quot;Data from the flu_data, dengue_data and gapminder datasets&quot;</span>) <span class="sc">+</span></span>
+<span id="cb26-9"><a href="working-with-databases.html#cb26-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/stats_graphs-2.png" width="672" /></p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="working-with-databases.html#cb27-1" aria-hidden="true" tabindex="-1"></a>tidy_dfs <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> country, <span class="at">y =</span> activity)) <span class="sc">+</span></span>
+<span id="cb27-2"><a href="working-with-databases.html#cb27-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">fill =</span> country)) <span class="sc">+</span></span>
+<span id="cb27-3"><a href="working-with-databases.html#cb27-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Boxplot of the activity per country&quot;</span>,</span>
+<span id="cb27-4"><a href="working-with-databases.html#cb27-4" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">&quot;&quot;</span>,</span>
+<span id="cb27-5"><a href="working-with-databases.html#cb27-5" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">&quot;Activity&quot;</span>,</span>
+<span id="cb27-6"><a href="working-with-databases.html#cb27-6" aria-hidden="true" tabindex="-1"></a>       <span class="at">caption =</span> <span class="st">&quot;Data from the flu_data, dengue_data and gapminder datasets&quot;</span>) <span class="sc">+</span></span>
+<span id="cb27-7"><a href="working-with-databases.html#cb27-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/stats_graphs-3.png" width="672" /></p>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="working-with-databases.html#cb28-1" aria-hidden="true" tabindex="-1"></a>tidy_dfs <span class="sc">%&gt;%</span> <span class="fu">filter</span>(group <span class="sc">==</span> <span class="st">&quot;flu_activity&quot;</span>) <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> activity)) <span class="sc">+</span></span>
+<span id="cb28-2"><a href="working-with-databases.html#cb28-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>() <span class="sc">+</span></span>
+<span id="cb28-3"><a href="working-with-databases.html#cb28-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Graph of the average flu activity per year&quot;</span>,</span>
+<span id="cb28-4"><a href="working-with-databases.html#cb28-4" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">&quot;Year&quot;</span>,</span>
+<span id="cb28-5"><a href="working-with-databases.html#cb28-5" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">&quot;Activity&quot;</span>,</span>
+<span id="cb28-6"><a href="working-with-databases.html#cb28-6" aria-hidden="true" tabindex="-1"></a>       <span class="at">caption =</span> <span class="st">&quot;Data from the flu_data dataset&quot;</span>) <span class="sc">+</span></span>
+<span id="cb28-7"><a href="working-with-databases.html#cb28-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/stats_graphs-4.png" width="672" /></p>
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="mental-health-impacts-in-argentinean-college-students-during-covid-19-quarantine.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="portfolio-assignment-6-2.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
