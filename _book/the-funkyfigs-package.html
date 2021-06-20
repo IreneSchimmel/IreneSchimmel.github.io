@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Portfolio of Irene Schimmel</title>
-  <meta name="description" content="Portfolio of Irene Schimmel" />
+  <title>4 The funkyfigs package | Portfolio of Irene Schimmel</title>
+  <meta name="description" content="4 The funkyfigs package | Portfolio of Irene Schimmel" />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Portfolio of Irene Schimmel" />
+  <meta property="og:title" content="4 The funkyfigs package | Portfolio of Irene Schimmel" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Portfolio of Irene Schimmel" />
+  <meta name="twitter:title" content="4 The funkyfigs package | Portfolio of Irene Schimmel" />
   
   
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="resume.html"/>
+<link rel="prev" href="applying-the-guerrilla-analytics-framework.html"/>
+<link rel="next" href="c-elegans-plate-experiment-analysis.html"/>
 <script src="libs/header-attrs-2.9/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -145,8 +145,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6" data-path="tocilizumab-in-patients-hospitalized-with-covid-19-pneumonia-salama-et-al-2020.html"><a href="tocilizumab-in-patients-hospitalized-with-covid-19-pneumonia-salama-et-al-2020.html"><i class="fa fa-check"></i><b>6</b> Tocilizumab in Patients Hospitalized with Covid-19 Pneumonia (Salama et al., 2020)</a></li>
 <li class="chapter" data-level="7" data-path="mental-health-impacts-in-argentinean-college-students-during-covid-19-quarantine.html"><a href="mental-health-impacts-in-argentinean-college-students-during-covid-19-quarantine.html"><i class="fa fa-check"></i><b>7</b> Mental Health Impacts in Argentinean College Students During COVID-19 Quarantine</a></li>
 <li class="chapter" data-level="8" data-path="working-with-databases.html"><a href="working-with-databases.html"><i class="fa fa-check"></i><b>8</b> Working with databases</a></li>
-<li class="chapter" data-level="9" data-path="parameterized-report-on-covid-19-cases-and-deaths-in-europe.html"><a href="parameterized-report-on-covid-19-cases-and-deaths-in-europe.html"><i class="fa fa-check"></i><b>9</b> Parameterized report on COVID-19 cases and deaths in Europe</a></li>
-<li class="chapter" data-level="10" data-path="my-python-journey.html"><a href="my-python-journey.html"><i class="fa fa-check"></i><b>10</b> My Python journey</a></li>
+<li class="chapter" data-level="9" data-path="portfolio-assignment-6-2.html"><a href="portfolio-assignment-6-2.html"><i class="fa fa-check"></i><b>9</b> “Portfolio assignment 6.2”</a></li>
+<li class="chapter" data-level="10" data-path="parameterized-report-on-covid-19-cases-and-deaths-in-europe.html"><a href="parameterized-report-on-covid-19-cases-and-deaths-in-europe.html"><i class="fa fa-check"></i><b>10</b> Parameterized report on COVID-19 cases and deaths in Europe</a></li>
 </ul>
 
       </nav>
@@ -164,15 +164,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Portfolio of Irene Schimmel</h1>
-</div>
-<div id="introduction" class="section level1" number="1">
-<h1><span class="header-section-number">1</span> Introduction</h1>
-<p>Welcome to my portfolio!<br />
-This book may shows an overview of my data science and other programming skills.</p>
-<p>In the next chapter you will find my resume and in the chapters after that, there will be some exercises and short reports to give you some insight in my abilities to, for example, handle biological data.</p>
-<p>For more information or other coding I have done, feel free to visit my <a href="https://github.com/IreneSchimmel">Github account</a> or to contact me!</p>
+<div id="the-funkyfigs-package" class="section level1" number="4">
+<h1><span class="header-section-number">4</span> The funkyfigs package</h1>
+<p>To see what package building was all about, I created the <code>funkyfigs</code> package. This package, for now, consists of four functions, designed to make data wrangling and visualisation a little easier.</p>
+<ul>
+<li><p>There is the <code>blast_graph</code> function, which gives a clear overview graph on the composition after you’ve run a sample in BLAST+.</p></li>
+<li><p>The <code>photospectro_bar</code> and <code>photospectro_boxplot</code> functions make it a little easier to create bar graps and boxplots, respectively, for photospectrometry measurements (because we all know that putting in those measurement is enough work on it’s own). They can also be used for other data though! Just don’t put it in any official reports as the labs will be designed for photospectrography.</p></li>
+<li><p>Finally, there is the <code>url_table</code> function, that will add a column with individual url links per cell to your table/tibble/dataframe/etc., so you can easily keep additional information close by!</p></li>
+</ul>
+<p>Curious? You can install the package for yourself, using <a href="https://github.com/IreneSchimmel/funkyfigs">this Github repository</a>!<br />
+If you want any more information on the package or it’s functions, I’ve made a (I hope) very clear vignette. This is also available in the repository mentioned above.</p>
 
 </div>
             </section>
@@ -180,8 +181,8 @@ This book may shows an overview of my data science and other programming skills.
           </div>
         </div>
       </div>
-
-<a href="resume.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="applying-the-guerrilla-analytics-framework.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="c-elegans-plate-experiment-analysis.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

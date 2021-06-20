@@ -1,4 +1,4 @@
-# "Portfolio assignment 6.2"
+# My Python journey
 
 
 In a little more than two years from now, I'd like to be graduating the Applied Data Science master at University Utrecht. This minor is a great prerequisite, as it focuses on R and statistics. 

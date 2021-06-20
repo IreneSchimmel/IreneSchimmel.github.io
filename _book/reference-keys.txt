@@ -10,5 +10,6 @@ c.-elegans-plate-experiment-analysis
 tocilizumab-in-patients-hospitalized-with-covid-19-pneumonia-salama-et-al.-2020
 mental-health-impacts-in-argentinean-college-students-during-covid-19-quarantine
 working-with-databases
+portfolio-assignment-6.2
 parameterized-report-on-covid-19-cases-and-deaths-in-europe
 my-python-journey
