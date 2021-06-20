@@ -1,0 +1,43 @@
+# Parameterized report on COVID-19 cases and deaths in Europe
+
+```{r setup, warning=FALSE, message=FALSE}
+library(tidyverse)
+library(ggplot2)
+```
+
+```{r import}
+data_covid_2021 <- read.csv("data/data_covid_2021.csv") %>% dplyr::select("month", "year", "cases", "deaths", "countriesAndTerritories")
+data_covid_2020 <- read.csv("data/data_covid_2020.csv") %>% dplyr::select("month", "year", "cases", "deaths", "countriesAndTerritories")
+
+data_covid <- rbind(data_covid_2020, data_covid_2021 )
+```
+
+```{r cases}
+title <- paste("Covid-19 cases from", params$country)
+subtitle <- paste("In the year", params$year)
+
+data_covid %>% filter(countriesAndTerritories==params$country, year==params$year, month>=params$period_start, month<=params$period_end) %>% 
+  ggplot(aes(x = month, y = cases)) +
+  geom_line() +
+  labs(title = paste0(title),
+       subtitle = paste0(subtitle),
+       x = "Months",
+       y = "Cases",
+       caption = "Data from the ECDC.") +
+  theme_minimal()
+```
+
+```{r deaths}
+title <- paste("Covid-19 deaths from", params$country)
+subtitle <- paste("In the year", params$year)
+
+data_covid %>% filter(countriesAndTerritories==params$country, year==params$year, month>=params$period_start, month<=params$period_end) %>% 
+  ggplot(aes(x = month, y = deaths)) +
+  geom_line() +
+  labs(title = paste0(title),
+       subtitle = paste0(subtitle),
+       x = "Months",
+       y = "Deaths",
+       caption = "Data from the ECDC.") +
+  theme_minimal()
+```
