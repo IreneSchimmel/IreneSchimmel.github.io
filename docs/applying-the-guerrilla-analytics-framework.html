@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>8 “Portfolio assignment 6.2” | Portfolio of Irene Schimmel</title>
-  <meta name="description" content="8 “Portfolio assignment 6.2” | Portfolio of Irene Schimmel" />
+  <title>3 Applying the Guerrilla analytics framework | Portfolio of Irene Schimmel</title>
+  <meta name="description" content="3 Applying the Guerrilla analytics framework | Portfolio of Irene Schimmel" />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="8 “Portfolio assignment 6.2” | Portfolio of Irene Schimmel" />
+  <meta property="og:title" content="3 Applying the Guerrilla analytics framework | Portfolio of Irene Schimmel" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="8 “Portfolio assignment 6.2” | Portfolio of Irene Schimmel" />
+  <meta name="twitter:title" content="3 Applying the Guerrilla analytics framework | Portfolio of Irene Schimmel" />
   
   
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="working-with-databases.html"/>
-<link rel="next" href="parameterized-report-on-covid-19-cases-and-deaths-in-europe.html"/>
+<link rel="prev" href="resume.html"/>
+<link rel="next" href="c-elegans-plate-experiment-analysis.html"/>
 <script src="libs/header-attrs-2.9/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -163,25 +163,31 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="portfolio-assignment-6.2" class="section level1" number="8">
-<h1><span class="header-section-number">8</span> “Portfolio assignment 6.2”</h1>
-<p>In a little more than two years from now, I’d like to be graduating the Applied Data Science master at University Utrecht. This minor is a great prerequisite, as it focuses on R and statistics.
-Besides that, however, the master also requires basic knowledge of data-analysis and statistics in Python. While the data-analysis and statistics knowledge overall will be the same, I’ll need to know how to do these things using Python.</p>
-<p>Therefore, I will spend this course’s free time studying Python, with a focus on data-analysis and statistics.
-I will start by doing some tutorials on the <a href="https://wiki.python.org/moin/BeginnersGuide/Programmers">BeginnersGuide</a>.
-Then, I will do at least <a href="https://towardsdatascience.com/a-beginners-guide-to-data-analysis-in-python-188706df5447">this tutorial</a> on data-analysis using Python. Maybe more, depending on the time it takes.
-After that, I will walk through <a href="https://realpython.com/python-statistics/">this tutorial</a> to get some insight in how to use statistics in Python. This tutorial also incorporates some data wrangling, so it will be a nice addition.</p>
-<p>While I realize that this obviously isn’t enough to learn Python, I think it’ll make for a great start.
-I’ll try and learn some more over the summer, probably asking some tutoring from my friends that already have a lot of experience using Python (they better be glad, seeing as how they’re always bugging me to start learning it).</p>
+<div id="applying-the-guerrilla-analytics-framework" class="section level1" number="3">
+<h1><span class="header-section-number">3</span> Applying the Guerrilla analytics framework</h1>
+<p>When showing my knowledge of the Guerrilla analytics framework, I wanted to take a project folder that would really transform. I found such a folder in my practice project directory.</p>
+<p>As you can see below, it’s rather messy. While the folder names are quite clear, the contents are not so much; there are some empty folders, some duplicates and even a folder with another project.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="applying-the-guerrilla-analytics-framework.html#cb1-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">&quot;images&quot;</span>, <span class="st">&quot;dir_tree_pre.jpg&quot;</span>))</span></code></pre></div>
+<p><img src="images/dir_tree_pre.JPG" /><!-- --></p>
+<p>Rather overdue for a clean-up!</p>
+<p>After removing all unneccesary folders and files from the project directory and storing all the desired files in the right folders, the directory looks like this!</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="applying-the-guerrilla-analytics-framework.html#cb2-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">&quot;images&quot;</span>, <span class="st">&quot;dir_tree_post.jpg&quot;</span>))</span></code></pre></div>
+<p><img src="images/dir_tree_post.JPG" /><!-- --></p>
 
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="applying-the-guerrilla-analytics-framework.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse) <span class="co">#version 1.3.0</span></span>
+<span id="cb3-2"><a href="applying-the-guerrilla-analytics-framework.html#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(drc) <span class="co">#version 3.0-1</span></span>
+<span id="cb3-3"><a href="applying-the-guerrilla-analytics-framework.html#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl) <span class="co">#version 1.3.1</span></span>
+<span id="cb3-4"><a href="applying-the-guerrilla-analytics-framework.html#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2) <span class="co">#version 3.3.3</span></span>
+<span id="cb3-5"><a href="applying-the-guerrilla-analytics-framework.html#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="applying-the-guerrilla-analytics-framework.html#cb3-6" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span>opts_chunk<span class="sc">$</span><span class="fu">set</span>(<span class="at">warning=</span><span class="cn">FALSE</span>, <span class="at">message=</span><span class="cn">FALSE</span>)</span></code></pre></div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="working-with-databases.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="parameterized-report-on-covid-19-cases-and-deaths-in-europe.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="resume.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="c-elegans-plate-experiment-analysis.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
