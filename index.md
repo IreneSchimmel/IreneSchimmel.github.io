@@ -1,0 +1,20 @@
+---
+title: "Portfolio of Irene Schimmel"
+authors: "Irene Schimmel"
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+documentclass: book
+params:
+  country: "Netherlands"
+  year: "2021"
+  period_start: "4"
+  period_end: "6"
+---
+# Introduction
+
+Welcome to my portfolio!    
+This book may shows an overview of my data science and other programming skills.     
+
+In the next chapter you will find my resume and in the chapters after that, there will be some exercises and short reports to give you some insight in my abilities to, for example, handle biological data.
+
+For more information or other coding I have done, feel free to visit my [Github account](https://github.com/IreneSchimmel) or to contact me!
