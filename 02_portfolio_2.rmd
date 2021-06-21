@@ -4,7 +4,7 @@ When showing my knowledge of the Guerrilla analytics framework, I wanted to take
 
 As you can see below, it's rather messy. While the folder names are quite clear, the contents are not so much; there are some empty folders, some duplicates and even a folder with another project.
 
-```{r libs}
+```{r libs, warning=FALSE}
 library(knitr)
 ```
 
