@@ -1,7 +1,3 @@
----
-output: html_document
----
-
 # Tocilizumab in Patients Hospitalized with Covid-19 Pneumonia (Salama et al., 2020)
 ***
 
