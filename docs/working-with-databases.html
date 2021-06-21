@@ -146,7 +146,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7" data-path="mental-health-impacts-in-argentinean-college-students-during-covid-19-quarantine.html"><a href="mental-health-impacts-in-argentinean-college-students-during-covid-19-quarantine.html"><i class="fa fa-check"></i><b>7</b> Mental Health Impacts in Argentinean College Students During COVID-19 Quarantine</a></li>
 <li class="chapter" data-level="8" data-path="working-with-databases.html"><a href="working-with-databases.html"><i class="fa fa-check"></i><b>8</b> Working with databases</a></li>
 <li class="chapter" data-level="9" data-path="parameterized-report-on-covid-19-cases-and-deaths-in-europe.html"><a href="parameterized-report-on-covid-19-cases-and-deaths-in-europe.html"><i class="fa fa-check"></i><b>9</b> Parameterized report on COVID-19 cases and deaths in Europe</a></li>
-<li class="chapter" data-level="10" data-path="my-python-journey.html"><a href="my-python-journey.html"><i class="fa fa-check"></i><b>10</b> My Python journey</a></li>
+<li class="chapter" data-level="10" data-path="my-python-journey.html"><a href="my-python-journey.html"><i class="fa fa-check"></i><b>10</b> My Python journey</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="my-python-journey.html"><a href="my-python-journey.html#the-plan"><i class="fa fa-check"></i><b>10.1</b> The plan</a></li>
+<li class="chapter" data-level="10.2" data-path="my-python-journey.html"><a href="my-python-journey.html#the-result"><i class="fa fa-check"></i><b>10.2</b> The result</a></li>
+</ul></li>
 </ul>
 
       </nav>
@@ -232,27 +236,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## 5 2003    01  26 Argentina       NA
 ## 6 2003    02  02 Argentina       NA</code></pre>
 <div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="working-with-databases.html#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(df_gapminder)</span></code></pre></div>
-<pre><code>##               country year infant_mortality
-## 1             Albania 1960           115.40
-## 2             Algeria 1960           148.20
-## 3              Angola 1960           208.00
-## 4 Antigua and Barbuda 1960               NA
-## 5           Argentina 1960            59.87
-## 6             Armenia 1960               NA
-##   life_expectancy fertility population
-## 1           62.87      6.19    1636054
-## 2           47.50      7.65   11124892
-## 3           35.98      7.32    5270844
-## 4           62.97      4.43      54681
-## 5           65.39      3.11   20619075
-## 6           66.86      4.55    1867396
-##            gdp continent          region
-## 1           NA    Europe Southern Europe
-## 2  13828152297    Africa Northern Africa
-## 3           NA    Africa   Middle Africa
-## 4           NA  Americas       Caribbean
-## 5 108322326649  Americas   South America
-## 6           NA      Asia    Western Asia</code></pre>
+<pre><code>##               country year infant_mortality life_expectancy
+## 1             Albania 1960           115.40           62.87
+## 2             Algeria 1960           148.20           47.50
+## 3              Angola 1960           208.00           35.98
+## 4 Antigua and Barbuda 1960               NA           62.97
+## 5           Argentina 1960            59.87           65.39
+## 6             Armenia 1960               NA           66.86
+##   fertility population          gdp continent          region
+## 1      6.19    1636054           NA    Europe Southern Europe
+## 2      7.65   11124892  13828152297    Africa Northern Africa
+## 3      7.32    5270844           NA    Africa   Middle Africa
+## 4      4.43      54681           NA  Americas       Caribbean
+## 5      3.11   20619075 108322326649  Americas   South America
+## 6      4.55    1867396           NA      Asia    Western Asia</code></pre>
 <p>The gapminder dataset needed some cleaning and ofcourse this new, clean dataset needed to be put in the database as well.</p>
 <div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="working-with-databases.html#cb24-1" aria-hidden="true" tabindex="-1"></a>clean_gapminder <span class="ot">&lt;-</span> df_gapminder <span class="sc">%&gt;%</span> <span class="fu">na.omit</span>()</span>
 <span id="cb24-2"><a href="working-with-databases.html#cb24-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -281,29 +278,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="working-with-databases.html#cb26-1" aria-hidden="true" tabindex="-1"></a>joined_dfs <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;data/joined_dfs_202106171226.csv&quot;</span>)</span>
 <span id="cb26-2"><a href="working-with-databases.html#cb26-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb26-3"><a href="working-with-databases.html#cb26-3" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(joined_dfs)</span></code></pre></div>
-<pre><code>##  infant_mortality  flu_activity   
-##  Min.   :12.70    Min.   :  56.0  
-##  1st Qu.:14.80    1st Qu.: 178.0  
-##  Median :16.60    Median : 268.0  
-##  Mean   :22.65    Mean   : 441.6  
-##  3rd Qu.:27.05    3rd Qu.: 539.0  
-##  Max.   :53.70    Max.   :3041.0  
-##                   NA&#39;s   :2551    
-##  dengue_activity       year     
-##  Min.   :0.0040   Min.   :2002  
-##  1st Qu.:0.0270   1st Qu.:2005  
-##  Median :0.0560   Median :2007  
-##  Mean   :0.0982   Mean   :2007  
-##  3rd Qu.:0.1080   3rd Qu.:2009  
-##  Max.   :1.0000   Max.   :2011  
-##  NA&#39;s   :366                    
-##    country         
-##  Length:97768      
-##  Class :character  
-##  Mode  :character  
-##                    
-##                    
-##                    
+<pre><code>##  infant_mortality  flu_activity    dengue_activity 
+##  Min.   :12.70    Min.   :  56.0   Min.   :0.0040  
+##  1st Qu.:14.80    1st Qu.: 178.0   1st Qu.:0.0270  
+##  Median :16.60    Median : 268.0   Median :0.0560  
+##  Mean   :22.65    Mean   : 441.6   Mean   :0.0982  
+##  3rd Qu.:27.05    3rd Qu.: 539.0   3rd Qu.:0.1080  
+##  Max.   :53.70    Max.   :3041.0   Max.   :1.0000  
+##                   NA&#39;s   :2551     NA&#39;s   :366     
+##       year        country         
+##  Min.   :2002   Length:97768      
+##  1st Qu.:2005   Class :character  
+##  Median :2007   Mode  :character  
+##  Mean   :2007                     
+##  3rd Qu.:2009                     
+##  Max.   :2011                     
 ## </code></pre>
 <div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="working-with-databases.html#cb28-1" aria-hidden="true" tabindex="-1"></a>tidy_dfs <span class="ot">&lt;-</span> joined_dfs <span class="sc">%&gt;%</span> <span class="fu">gather</span>(<span class="st">&#39;infant_mortality&#39;</span>, <span class="st">&#39;flu_activity&#39;</span>, <span class="st">&#39;dengue_activity&#39;</span>, <span class="at">key =</span> <span class="st">&quot;group&quot;</span>, <span class="at">value =</span> <span class="st">&quot;activity&quot;</span>, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
 <span id="cb28-2"><a href="working-with-databases.html#cb28-2" aria-hidden="true" tabindex="-1"></a></span>

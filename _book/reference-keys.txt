@@ -13,3 +13,5 @@ working-with-databases
 portfolio-assignment-6.2
 parameterized-report-on-covid-19-cases-and-deaths-in-europe
 my-python-journey
+the-plan
+the-result
